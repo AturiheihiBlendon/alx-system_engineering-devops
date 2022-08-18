@@ -3,11 +3,11 @@
 # and hi 0n 9th iteration
 
 n=1;
-while [ $n -lt 10 ];
+while [ $n -le 10 ];
 do
     echo "Best School"
     (( n++ ))
-    if [ $n -eq 9 ]
+    if [ $n -eq 10 ]
     then
         echo "Hi"
     fi
