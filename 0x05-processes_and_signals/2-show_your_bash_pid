@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Lists only bash PID
+ps -faux | grep bash
