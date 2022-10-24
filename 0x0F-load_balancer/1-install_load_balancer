@@ -10,7 +10,7 @@ sudo chown -R "$USER":"$USER" /etc/haproxy/haproxy.cfg
 
 echo "ENABLED=1" >> /etc/default/haproxy
 
-conf=\
+config=\
 "
 global
         log /dev/log    local0
@@ -57,6 +57,6 @@ frontend myfrontend
         default_backend myservers
 "
 
-echo "$conf" > /etc/haproxy/haproxy.cfg
+echo "$config" > /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
