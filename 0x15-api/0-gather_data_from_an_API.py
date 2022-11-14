@@ -6,8 +6,7 @@ import requests
 import sys
 
 
-if __name__ == "__main__":
-
+def fetch_todo():
     userId = sys.argv[1]
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                         .format(userId))
@@ -29,3 +28,7 @@ if __name__ == "__main__":
 
     print('\n'.join(["\t " + task.get('title') for task in todos.json()
           if task.get('userId') == int(userId) and task.get('completed')]))
+
+
+if __name__ == "__main__":
+    fetch_todo()
